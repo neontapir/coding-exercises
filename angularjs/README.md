@@ -127,8 +127,9 @@ all tests are green when you are done.
 
 When you are finished, please commit your code on your local machine and then
 [create a patch using git](http://git-scm.com/docs/git-format-patch). Please DO
-NOT create a pull request against this repo. The final step is to send an email
-to your contact:
+NOT create a pull request against this repo.
+
+The final step is to send an email to your contact:
 
   1. Informing the examiner that you have completed the test
   2. Indicates which of the requirements you chose to complete
@@ -142,7 +143,3 @@ Time limit: 2 hours
 If you feel so moved, you may continue working and submit a second patch with a
 more complete solution. If you choose this option, be sure to indicate how much
 time you spent on your final submission as well.
-
-    $ npm install
-    $ node game.js &
-    $ mocha -w
