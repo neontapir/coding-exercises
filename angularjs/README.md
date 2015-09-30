@@ -60,7 +60,7 @@ To get the service up and running:
   5. To load the web application stub
      * `$ open localhost:3000`
   6. The expected behavior is your default web browser loads an HTML page that
-  prints "Success! Your environment is set up correctly!""
+  prints "Success! Your environment is set up correctly!"
 
 > NOTE: Add any additional setup instructions to the above numbered list, such
 as a command to run a data initialization script
