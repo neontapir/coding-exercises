@@ -1,5 +1,6 @@
 var express = require('express'),
-  app = exports.app = express();
+  app = exports.app = express(),
+  path = require('path');
 
 app.get('/api', function (req, res) {
   res.send('Bowling Game API is running');
@@ -33,10 +34,15 @@ app.get('/score', function (req, res) {
 	  		total += results[ball+2];
 	  	}
 	  	ball += 2;
-	}
+	  }
   }
   var result = { score: total };
   res.json(result);
+});
+
+// Application
+app.get('*', function(request, response) {
+  response.sendFile(path.join(__dirname + '/public/index.html'));
 });
 
 app.listen(process.env.PORT || 3000);

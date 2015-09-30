@@ -29,6 +29,8 @@ To review, the rules for scoring a tenpin bowling game are:
 
 ## Setup
 
+### Existing Infrastructure
+
 To get you started, I've provided a Node.JS service that uses Express that can
 score games of bowling. However, it's not fully suited to The Pinquisition's
 needs. To wit:
@@ -42,27 +44,44 @@ needs. To wit:
   3. The service does not record the games it scores.
   4. The service allows anyone to submit frames.
 
+### Scoring Service
+
 To get the service up and running:
 
   1. Clone this repository from GitHub to your local machine
   2. At the project root directory, run the following commands:
      * `$ npm install`
-     * `$ node game.js`
+     * `$ node game.js`     
      * `$ mocha` (in a separate window)
-  3. The expected result is that mocha reports that all tests passed
+  3. The expected result is that Mocha reports that all tests passed
+  4. To ensure Mongo is set up correctly, run the following command
+     * `$ mongod --dbpath data/db` (in a separate window)
+     * This exercise does not come with a schema
+  5. To load the web application stub
+     * `$ open localhost:3000`
+  6. The expected behavior is your default web browser loads an HTML page that
+  prints "Success! Your environment is set up correctly!""
+
+> NOTE: Add any additional setup instructions to the above numbered list, such
+as a command to run a data initialization script
+
+## Solution Constraints
+
+### Technology Stack
 
 This application creating during this exercise will be written using the MEAN
 stack, specifically:
 
-  * MongoDB, latest (or equivalent data store of your choice, being primarily a
-      UI test)
+  * MongoDB, latest
   * Express, latest
   * Angular.JS, latest version of 1.x
   * Node.JS, latest
 
-You may download, install and configure all of these components before starting
-the timer on the exercise, though any application-specific work should be done
-within the time allotted.
+You are encouraged to download, install and configure all of these components
+before starting the timer on the exercise, though any application-specific work
+should be done within the time allotted.
+
+### Use Existing Infrastructure
 
 Updates to the Node.JS service should extend the current test suite. Your
 Angular.JS code should be covered by tests as well. We use
@@ -70,7 +89,7 @@ Angular.JS code should be covered by tests as well. We use
 whatever testing frameworks you are comfortable with. It is up to your
 discretion how much testing is adequate.
 
-Because there are no assets included with this exercise, so feel free to use
+Because there are no assets included with this exercise, feel free to use
 whatever images and styling you wish, I highly recommend setting up a skeleton
 web application before you begin, either from scratch or using a quick-start
 tool like [Bootstrap](http://getbootstrap.com/) with a
@@ -79,7 +98,7 @@ moved, want to showcase your design skills and are looking for inspiration,
 consider the
 [medieval game of Kegel](http://www.forgedintime.com/bladesmithing-blog/2010/07/medieval-games-kegel-bowling-down-the-heathens/).
 
-However, as guiding principle, the focus of this coding exercise is on the
+As a guiding principle, the focus of this coding exercise is on the
 functionality, ease of use and your codecraft. Think of this as more of a
 feature demo, and not a GA release to production.
 
@@ -129,16 +148,28 @@ When you are finished, please commit your code on your local machine and then
 [create a patch using git](http://git-scm.com/docs/git-format-patch). Please DO
 NOT create a pull request against this repo.
 
+Patching is an uncommon practice, so if you want to test out your patch without
+risking your work:
+
+  1. Clone a fresh copy of this repository
+  2. `$ git apply path/to/your.patch`
+
 The final step is to send an email to your contact:
 
   1. Informing the examiner that you have completed the test
-  2. Indicates which of the requirements you chose to complete
+  2. Indicating which of the requirements you chose to complete
   3. Including a copy of the patch file you created
   4. Including this honor pledge: "I have not given, received, or used any
   unauthorized assistance. The patch I submitted was developed using only the
   time permitted."
 
 Time limit: 2 hours
+
+## Philosophy
+
+It's anticipated that you will not complete all the requirements. The point of
+this exercise is to provide context for a technical conversation. We feel this
+time limit provides enough time to establish that context.
 
 If you feel so moved, you may continue working and submit a second patch with a
 more complete solution. If you choose this option, be sure to indicate how much
