@@ -55,7 +55,7 @@ To get the service up and running:
      * `$ mocha` (in a separate window)
   3. The expected result is that Mocha reports that all tests passed
   4. To ensure Mongo is set up correctly, run the following command
-     * `$ mongod --dbpath data/db` (in a separate window)
+     * `$ mkdir -p data/db && mongod --dbpath data/db` (in a separate window)
      * This exercise does not come with a schema
   5. To load the web application stub
      * `$ open localhost:3000`
@@ -63,7 +63,7 @@ To get the service up and running:
   prints "Success! Your environment is set up correctly!"
 
 > NOTE: Add any additional setup instructions to the above numbered list, such
-as a command to run a data initialization script
+as a command to run a data initialization script.
 
 ## Solution Constraints
 
